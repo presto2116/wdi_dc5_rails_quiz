@@ -1,0 +1,9 @@
+ <h2>Circuses</h2>
+
+ <% @circuses.each do |circus| %>
+
+ <h3><%= link_to circus.name, circus_path(circus) %></h3> <div class="circus-image">
+ <p><%= image_tag(circus.image_url) %></p>
+ <% end %>
+ </div>
+ <%= link_to "Add Circus", new_circus_path %>

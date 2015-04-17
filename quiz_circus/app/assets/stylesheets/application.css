@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.circus-image img {
+	width: 200px;
+}

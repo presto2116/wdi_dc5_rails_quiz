@@ -1,1 +1,16 @@
 
+<h2><%= @circus.name %></h2>
+<ol>
+<% @circus.entertainers.each do |entertainer| %>
+
+<li><%= entertainer.name.capitalize %>: <%= entertainer.specialty %>
+<%= link_to "Edit", edit_entertainer_path( entertainer ) %>
+		<%= link_to "Destroy", entertainer_path( entertainer ), method: :delete %></li>
+<% end %>
+</ol>
+
+<%= link_to "Add Entertainer", new_entertainer_path %>
+<div class ="circus-image">
+ <%= image_tag(@circus.image_url) %>
+</div>
+<p><%= link_to 'Home', circuses_path %></p>
